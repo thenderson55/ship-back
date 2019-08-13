@@ -9,6 +9,7 @@ module Types
 
     field :create_twoot, mutation: Mutations::CreateTwoot
     field :create_user, mutation: Mutations::CreateUser
+    field :signin_user, mutation: Mutations::SignInUser
 
     # field :create_twoot, TwootType do
     #   argument :content, String, required: true

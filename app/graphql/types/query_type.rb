@@ -10,7 +10,7 @@ module Types
       "Oi World!"
     end
 
-    field :twoots, [Types::TwootType], null: false,
+    field :twoots, [TwootType], null: false,
       description: "All twoots"
     def twoots
       Twoot.all
@@ -30,13 +30,13 @@ module Types
       Twoot.where(user_id: user_id)
     end
 
-    field :user, Types::UserType, null: false,
+    field :user, UserType, null: false,
       description: "A user"
     def user
       User.first
     end
 
-    field :users, [Types::UserType], null: false,
+    field :users, [UserType], null: false,
       description: "All users"
     def users
       User.all

@@ -3,7 +3,7 @@ module Mutations
     null true
 
     argument :email, Types::AuthProviderEmailInput, required: false
-
+    
     field :token, String, null: true
     field :user, Types::UserType, null: true
 

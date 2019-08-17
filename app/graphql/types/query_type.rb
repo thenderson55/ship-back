@@ -42,6 +42,12 @@ module Types
       User.all
     end
 
+    field :followings, [FollowingType], null: false,
+      description: "All followingss"
+    def users
+      Following.all
+    end
+
 
 
   end

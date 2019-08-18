@@ -44,8 +44,17 @@ module Types
 
     field :followings, [FollowingType], null: false,
       description: "All followingss"
-    def users
+    def followings
       Following.all
+    end
+
+    field :followings_by_user_id, [FollowingType], null: true do
+      description "Find a post by ID"
+      argument :user_id, Integer, required: true
+    end
+  
+    def followings_by_user_id(user_id:)
+      Following.where(user_id: user_id)
     end
 
 

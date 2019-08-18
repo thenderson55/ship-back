@@ -8,6 +8,7 @@ module Types
     end
 
     field :create_twoot, mutation: Mutations::CreateTwoot
+    field :create_following, mutation: Mutations::CreateFollowing
     field :create_user, mutation: Mutations::CreateUser
     field :signin_user, mutation: Mutations::SignInUser
 

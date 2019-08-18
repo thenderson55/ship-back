@@ -43,13 +43,13 @@ module Types
     end
 
     field :followings, [FollowingType], null: false,
-      description: "All followingss"
+      description: "All followings"
     def followings
       Following.all
     end
 
     field :followings_by_user_id, [FollowingType], null: true do
-      description "Find a post by ID"
+      description "Find followings by ID"
       argument :user_id, Integer, required: true
     end
   

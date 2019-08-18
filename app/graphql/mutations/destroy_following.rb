@@ -1,14 +1,12 @@
 module Mutations
   class DestroyFollowing < BaseMutation
-    argument :email, String, required: true
-    argument :user_id, Integer, required: true
+    argument :id, ID, required: true
 
     type Types::FollowingType
 
-    def resolve(email: nil, user_id: nil)
-      Following.create!(
-        email: email,
-        user_id: user_id
+    def resolve(id: nil)
+      Following.destroy(
+        id
       )
     end
   end

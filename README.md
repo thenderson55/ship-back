@@ -19,7 +19,7 @@ in the console:
 
 add a user and a twoot:
 
-```rails c```
+```rails c```  - to start rails console
 
 ```User.create!(email: "hey@hey.com", password: "qwerty")```
 

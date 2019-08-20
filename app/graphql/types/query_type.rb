@@ -30,6 +30,17 @@ module Types
       Twoot.where(user_id: user_id)
     end
 
+    field :get_user_by_email, UserType, null: true do
+      description "Find a user by email"
+      argument :email, String, required: true
+    end
+  
+    def get_user_by_email(email:)
+      @user = User.where(email: email)
+      id = @user.ids[0]
+      User.find(id)
+    end
+
     field :user, UserType, null: false,
       description: "A user"
     def user

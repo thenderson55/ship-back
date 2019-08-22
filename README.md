@@ -13,7 +13,7 @@ in the console:
 
 ```rails db:purge db:create db:migrate```  - to clean out the database and create a fresh on
 
-``` raisl db:seed```  - to seed the database
+```rails db:seed```  - to seed the database
 
 ```rails s``` - to run the server
 

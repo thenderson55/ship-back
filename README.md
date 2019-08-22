@@ -1,24 +1,32 @@
-# README
+To run app:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+clone and cd into repository
 
-Things you may want to cover:
+in 'config/environment.rb' you need to setup a mailer system for signup verification - this app uses sendgrid - add your sendgrid username and password into the correct fields
 
-* Ruby version
+in 'config/initializers/devise.rb' update 'config.mailer_sender' with the email address you would like signup verification to come from
 
-* System dependencies
+in the console:
 
-* Configuration
 
-* Database creation
+```bundle``` - to install dependencies
 
-* Database initialization
+```rails db:purge db:create db:migrate```  - to clean out the database and create a fresh on
 
-* How to run the test suite
+``` raisl db:seed```  - to seed the database
 
-* Services (job queues, cache servers, search engines, etc.)
+```rails s``` - to run the server
 
-* Deployment instructions
+alternatively, add a  user and a twoot:
 
-* ...
+```rails c```  - to start rails console
+
+```User.create!(email: "hey@hey.com", password: "qwerty", username: "hey", avatar: "img_url")```
+
+```Twoot.create!(content: "My first twoot", user_id: 1)```
+
+api endpoint is http://localhost:3000/graphql
+
+you can test and add data to the database in https://api.graphql.jobs/
+
+this API has a UI at: https://github.com/thenderson55/ship-front

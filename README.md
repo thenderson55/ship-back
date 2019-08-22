@@ -25,9 +25,7 @@ alternatively, add a  user and a twoot:
 
 ```Twoot.create!(content: "My first twoot", user_id: 1)```
 
-to view users or twoots from db:
-
-```User.all```
+```User.all```  - to view all users in db:
 
 currently login and auth is a work in progress - the user and userEmail( 1, frank@frank.com ) has been set in: src/store/modules/twoots.js  
 
